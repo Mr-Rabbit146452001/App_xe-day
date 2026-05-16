@@ -21,11 +21,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.xesieuthi.ui.theme.BluePrimary
 
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.xesieuthi.ui.theme.XesieuthiTheme
-
-
-
 @Composable
 fun SessionEndedScreen(onStartNewSession: () -> Unit) {
     Scaffold(
@@ -178,21 +173,5 @@ fun InfoItem(icon: ImageVector, text: String) {
         Icon(icon, contentDescription = null, tint = Color.Gray, modifier = Modifier.size(20.dp))
         Spacer(Modifier.height(4.dp))
         Text(text, fontSize = 10.sp, color = Color.Gray)
-    }
-}
-
-
-@Preview(
-    name = "SessionEndedScreen",
-    showBackground = true,
-    showSystemUi = true
-)
-@Composable
-fun SessionEndedScreenPreview() {
-    XesieuthiTheme {
-        SessionEndedScreen(
-            onStartNewSession = {
-            }
-        )
     }
 }

@@ -17,12 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.xesieuthi.SmartCartApp
 import com.example.xesieuthi.ui.theme.BluePrimary
-import com.example.xesieuthi.ui.theme.XesieuthiTheme
 import kotlinx.coroutines.launch
 
 @Composable
@@ -175,22 +172,5 @@ fun ReceiptRow(label: String, value: String) {
     ) {
         Text(label, color = Color.Gray, fontSize = 14.sp)
         Text(value, fontWeight = FontWeight.Medium, fontSize = 14.sp)
-    }
-}
-
-
-@Preview(
-    name = "Màn hình Thanh toán Thành công",
-    showBackground = true,
-    showSystemUi = true // Bật cái này để xem toàn bộ màn hình điện thoại thực tế
-)
-@Composable
-fun PaymentSuccessScreenPreview() {
-    XesieuthiTheme {
-        PaymentSuccessScreen(
-            onFinishSession = {
-                // Sự kiện khi bấm nút Kết thúc, ở Preview ta để trống
-            }
-        )
     }
 }

@@ -21,9 +21,6 @@ import com.example.xesieuthi.model.CartItem
 import com.example.xesieuthi.model.CartState
 import com.example.xesieuthi.ui.theme.*
 import com.example.xesieuthi.util.FormatUtils
-import com.example.xesieuthi.SmartCartApp
-
-import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun CartScreen(
     cartState: CartState,
@@ -288,28 +285,5 @@ fun SummaryRow(label: String, value: String, valueColor: Color = Color.Black) {
     ) {
         Text(text = label, color = TextSecondary, fontSize = 14.sp)
         Text(text = value, color = valueColor, fontWeight = FontWeight.Medium, fontSize = 14.sp)
-    }
-}
-
-
-@Preview(
-    name = "CartScreen",
-    showBackground = true,
-    showSystemUi = true
-)
-@Composable
-fun PreviewCartScreen() {
-    XesieuthiTheme {
-        // Truyền dữ liệu ảo (Mock Data) có sẵn của bạn vào để xem hiển thị
-        val mockItems = com.example.xesieuthi.data.MockRepository.getMockCartItems()
-        val mockCartState = com.example.xesieuthi.model.CartState(items = mockItems)
-
-        CartScreen(
-            cartState = mockCartState,
-            onUpdateQuantity = { _, _ -> },
-            onRemoveRequest = {},
-            onCheckout = {},
-            onContinueShopping = {}
-        )
     }
 }
